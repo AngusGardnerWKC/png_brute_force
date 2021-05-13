@@ -177,7 +177,7 @@ int main(int argc, char* argv[])
 	if (argc != 6)
 	{
 		printf("%d", argc);
-		printf("Usage:%s <PNG file path>, <starting width> <starting height>\n",argv[0]);
+		printf("Usage:%s <PNG file path> <starting width> <starting height> <ending width (ceiling)> ending height (ceiling)\n",argv[0]);
 		return -1;
 	}
 
