@@ -176,7 +176,6 @@ int main(int argc, char* argv[])
 	
 	if (argc != 6)
 	{
-		printf("%d", argc);
 		printf("Usage:%s <PNG file path> <starting width> <starting height> <ending width> <ending height>\n",argv[0]);
 		return -1;
 	}
