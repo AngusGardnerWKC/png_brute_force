@@ -27,7 +27,7 @@ xxd scream.png | head -n 2
 ./png_brute_force scream.png 0 0 1000 1000
 ```
 
-![Alt text](https://github.com/[AngusGardnerWKC]/[png_brute_force]/blob/[main]/scream.png?raw=true)
+![](https://github.com/AngusGardnerWKC/png_brute_force/blob/main/scream.png)
 
 
 Overall, this program will brute force PNGs pretty quickly. By avoiding invoking a new process by running the pngcheck program each time we want to check the dimensions, it makes things many times faster. Being able to compute the CRC in the program speeds things up immensely.
