@@ -2,6 +2,8 @@
 
 **A small PNG Brute Forcing program I've written in C, building off of a CRC Computing Program written by minatu2d, over at [https://gist.github.com/minatu2d/a1bd400adb41312dd842](https://gist.github.com/minatu2d/a1bd400adb41312dd842)**
 
+**This program will take a PNG image with invalid dimensions (0x0, for example) and will brute-force the dimensions of the image, computing the CRC for the first chunk of the PNG to check if the dimensions are valid. This can be modified to check the CRC for all chunks in the image, but the purpose of this program is to simply check the dimensions.** 
+
 # Why?
 
 Because it's speedy, and it was a fun tiny project in C which builds off of something from last year in Python. Brute forcing should be quick, and writing the whole thing in C complements that.
