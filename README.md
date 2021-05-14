@@ -54,3 +54,7 @@ I'm not yet experienced enough to go through and rewrite the functions that hand
 # Further work needed
 
 To achieve even greater speeds, I'm going to be looking into replacing the fread() aspects of the crcBrute.c, in order to not have to use a FILE stream. The current implementation will mmap in the image, then use fmemopen() to convert that to a file pointer, leading to an extra fseek() being needed prior to each write, so as to not clobber values beyond the PNG dimensions.
+
+[https://stackoverflow.com/questions/2438953/how-is-fseek-implemented-in-the-filesystem](https://stackoverflow.com/questions/2438953/how-is-fseek-implemented-in-the-filesystem)
+
+Overall though, it seems that fseek() isn't actually too bad due to the aggressive caching algorithms of modern OS's. So whilst removing fseek() and FILE streams from the program entirely may yield some slight performance increase, the amount would likely be very small.
