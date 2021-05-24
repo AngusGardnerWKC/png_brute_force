@@ -20,7 +20,7 @@ gcc crcBrute.c pngcrc.c pngcrc.h -o png_brute_force
 
 # Example
 
-For brute forcing a PNG with the name "map.png", with an estimate that the PNG is less than 1000x1000.
+For brute forcing a PNG with the name "scream.png", with an estimate that the PNG is less than 1000x1000.
 
 ```bash
 xxd scream.png | head -n 2
