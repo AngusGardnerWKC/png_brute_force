@@ -58,3 +58,5 @@ To achieve even greater speeds, I'm going to be looking into replacing the fread
 [https://stackoverflow.com/questions/2438953/how-is-fseek-implemented-in-the-filesystem](https://stackoverflow.com/questions/2438953/how-is-fseek-implemented-in-the-filesystem)
 
 Overall though, it seems that fseek() isn't actually too bad due to the aggressive caching algorithms of modern OS's. So whilst removing fseek() and FILE streams from the program entirely may yield some slight performance increase, the amount would likely be very small.
+
+Something else I've noticed is that whilst having printf() run on every iteration is nice, because it shows the progress, it actually slows the program down a LOT. We're adding an enormous amount of instructions in just to print the same stuff to the screen. Taking this out is easy. 
