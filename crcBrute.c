@@ -42,7 +42,6 @@ static unsigned int readUint(FILE *fi)
 	unsigned char oneBytes[4];
 	if (fread(&oneBytes[0], 1, 4, fi) == 4)
 	{
-		//printf("%x%x%x%x\n",oneBytes[0], oneBytes[1], oneBytes[2], oneBytes[3]);
 		val += oneBytes[0] * (1 << 24);
 		val += oneBytes[1] * (1 << 16);
 		val += oneBytes[2] * (1 << 8);
@@ -50,7 +49,6 @@ static unsigned int readUint(FILE *fi)
 	}	
 	else 
 	{
-		//printf("End of file HERE");
 	}
 	return val;
 }
@@ -64,7 +62,6 @@ static int readint(FILE *fi)
 	unsigned char oneBytes[4];
 	if (fread(&oneBytes[0], 1, 4, fi) == 4)
 	{
-		//printf("%x%x%x%x\n",oneBytes[0], oneBytes[1], oneBytes[2], oneBytes[3]);
 		val += oneBytes[0] * (1 << 24);
 		val += oneBytes[1] * (1 << 16);
 		val += oneBytes[2] * (1 << 8);
@@ -72,7 +69,6 @@ static int readint(FILE *fi)
 	}	
 	else 
 	{
-		//printf("End of file HERE");
 	}
 	return val;
 }
@@ -93,7 +89,6 @@ int crc_in_chunk(FILE *fi)
 	
 	// Read chunk length
 	unsigned int chunkLength = 	readUint(fi);
-	//printf("Chunklength after readUint is: %d\n", chunkLength);
 	
 	unsigned int chunkSize = chunkLength + CHUNK_TYPE_SIZE;
 	if (!chunkLength)// No data
